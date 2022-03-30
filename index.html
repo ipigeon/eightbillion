@@ -53,6 +53,29 @@
 
 <script src="https://unpkg.com/tone@next"></script>
 <script>
+//TEST
+//define synth 
+const test_synth = new Tone.FMSynth({
+  oscillator:{
+    detune: 0,
+    phase: 0,
+  },  
+  envelope:{
+    attack: 0.2,
+    decay: 0.05,
+    sustain: 0.2,
+    release: 0.1,
+ },
+}).toDestination();
+//play in loop (a note every quarter-note)
+const loop = new Tone.Loop(time => {
+	test_synth.triggerAttackRelease("C2", "8n", time);
+}, "4n").start(0);
+// the loops start when the Transport is started
+Tone.Transport.stop()
+// ramp up to 800 bpm over 10 seconds
+//Tone.Transport.bpm.rampTo(800, 10);
 
-  
 </script>
+
+
