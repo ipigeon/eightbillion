@@ -1,0 +1,91 @@
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> ::8billions:: // .i n t e r s p e c i f i c s. </title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!-- sound libraries --> 
+    <script src="https://cdn.jsdelivr.net/npm/@tonaljs/tonal/browser/tonal.min.js"></script>
+    <script src="https://unpkg.com/tone@14.7.58/build/Tone.js"></script>
+    <!-- can also invoke locally 
+    <script src="./js/p5.js"></script>
+    <script src="./js/Tone.min.js"></script>
+    <script src="./js/tonal.js"></script>
+    -->
+  </head> 
+  
+
+<body>
+
+
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"> >[8billions]</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">./interspecifics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://main.int-lab.cc/?page_id=12">./enter</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">./sources</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://www.theworldcounts.com/challenges/planet-earth/state-of-the-planet/world-population-clock-live/story">All of Us Right now</a></li>
+                            <li><a class="dropdown-item" href="https://www.worldometers.info/world-population/">Current World Population</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="https://www.theworldcounts.com/embed/challenges/8">Real Time Estimation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page content-->
+    <div class="container">
+        <!-- Part 1, the old form -->
+        <!--form id="input-user-form">
+            <input type="text" id="some_input_id" placeholder="This is for some input" size="25">
+            <input id="start-button" type="submit" value="Start">
+        </form-->
+        <!-- Part 2, the old inexistent graph -->
+        <div id="contribution-graph"></div>
+        <!-- part 3, counters -->
+        <div id="display-counter" class="text-center mt-5">
+            <hr>
+            <!-- section float -->        
+            <h1>World Population (<i>increment by second</i>): 
+                <div id="counter-float"></div>
+            </h1>
+            <p class="lead">
+                <div id="digits-container-float">
+                </div>
+            </p>            
+            <p><ul id="digits-float-list"></ul></p>
+            <hr>
+            <!-- section int -->
+            <h1>World Population (<i>increment by one</i>): 
+                <div id="counter-int"></div>
+            </h1>
+            <p class="lead">
+                <div id="digits-container-int">
+                </div>
+            </p>            
+            <p><ul id="digits-int-list"></ul></p>
+            <hr>
+        </div>
+        <!-- part 4, others -->
+        <div id="other-message"></div>
+    </div>
+
+<script src="./js/eightbi.js"></script>
+</body>
+</html>
